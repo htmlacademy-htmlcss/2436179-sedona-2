@@ -7,9 +7,9 @@
   </head>
 
   <body>
-    <header class="page-header">
+    <header class="page-header" data-test="header">
+      <img class="page-header-logo" src="images/header/logo.svg" alt="Логотип сайта Седона" width="140" height="70">
       <nav class="navigation">
-        <img class="page-header-logo" src="" alt="Логотип сайта Седона">
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link navigation-link-active" href="index.html">Главная</a>
@@ -30,18 +30,19 @@
           <li class="navigation-user-item">
             <a class="navigation-user-link" href="#">
               <span class="visualily-hidden">Избранное</span>
+              <span class="likes-number">12</span>
             </a>
           </li>
         </ul>
         <a class="navigation-button button" href="#">Хочу сюда!</a>
       </nav>
     </header>
-    <main class="main-index">
-      <section class="hero">
+    <main class="main-index" data-test="main">
+      <section class="hero" data-test="hero">
         <h1 class="visualily-hidden">Седона - небольшой городок в Аризоне</h1>
-        <img class="hero-image" src="" alt="Welcome to the gorgeous. Sedona. 'Because the Grand Canyon sucks!'">
+        <img class="hero-image" src="images/welcome.svg" alt="Welcome to the gorgeous. Sedona. 'Because the Grand Canyon sucks!'" width="458" height="352">
       </section>
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <h2 class="visualily-hidden">Приемущества</h2>
         <p class="advantages-description">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p class="advantages-subtitle">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -49,7 +50,7 @@
           <li class="advantages-item">
             <h3 class="advantages-item-title">Настоящий городок</h3>
             <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img class="advantages-item-img" src="" alt="Здание в городе Седона">
+            <img class="advantages-item-img" src="images/real-town.jpg" alt="Здание в городе Седона" width="800" height="385">
           </li>
           <li class="advantages-item">
             <h3 class="advantages-item-title">Небольшая площадь</h3>
@@ -64,7 +65,7 @@
             <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item">
-            <img class="advantages-item-img" src="" alt="Панорама каньона">
+            <img class="advantages-item-img" src="images/canyon.jpg" alt="Панорама каньона" width="800" height="385">
             <h3 class="advantages-item-title">Там есть мост дьявола</h3>
             <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
@@ -89,12 +90,12 @@
           </li>
         </ul>
       </section>
-      <section class="search">
+      <section class="search" data-test="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-button button" href="#">ПОИСК ГОСТИНИЦЫ В седоне</a>
+        <a class="search-button button" href="#">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="subscription">
+      <section class="subscription" data-test="subscribe">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
         <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -104,7 +105,7 @@
       </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="footer-contacts">
         <ul class="footer-social-list">
           <li class="footer-social-item">
