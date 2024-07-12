@@ -11,33 +11,36 @@
   <body>
     <header class="page-header" data-test="header">
       <nav class="navigation">
-        <a href="index.html">
+        <a href="#">
           <img class="page-header-logo" src="images/header/logo.svg" alt="Логотип сайта Седона" width="140" height="70">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-active" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-active" href="catalog.html">Гостиницы</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user-list">
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+        <ul class="navigation-list navigation-user-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
               <span class="visualily-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
               <span class="visualily-hidden">Избранное</span>
+              <span class="likes-number">12</span>
             </a>
           </li>
+          <li class="navigation-item">
+            <a class="navigation-button button" href="#">Хочу сюда!</a>
+          </li>
         </ul>
-        <a class="navigation-button button" href="#">Хочу сюда!</a>
       </nav>
     </header>
 
@@ -54,7 +57,7 @@
             <a class="breadcrums-item-link">Гостиницы</a>
           </li>
         </ol>
-        <h2 class="visualily-hidden">Фильтрация гостиниц</h2>
+        <h2 class="visualily-hidden" hidden>Фильтрация гостиниц</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -79,7 +82,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group-type">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -102,41 +105,47 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                <label class="control">От
-                  <input class="control-input" type="text" name="from" placeholder="0">
-                </label>
-                <label class="control">До
-                  <input class="control-input" type="text" name="to" placeholder="9000">
-                </label>
+            <label class="control">От
+              <input class="control-input" type="text" name="from" placeholder="0">
+            </label>
+            <label class="control">До
+              <input class="control-input" type="text" name="to" placeholder="9000">
+            </label>
           </fieldset>
-          <button class="catalog-filter-button" type="submit">Применить</button>
-          <button class="catalog-filter-button catalog-filter-button-cancel" type="reset">Сбросить</button>
+          <div class="button-wrapper">
+            <button class="catalog-filter-button" type="submit">Применить</button>
+            <button class="catalog-filter-button catalog-filter-button-cancel" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
       <section class="catalog-products" data-test="catalog">
-        <h2 class="visualily-hidden">Список гостиниц</h2>
-        <p class="catalog-products-title">Найдено гостиниц: 38</p>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвые</option>
-          <option value="popular">Сначала популярные</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <a href="#" class="button-view button-view-active">
-          <span class="visualily-hidden">Показать карточки</span>
-        </a>
-        <a href="#" class="button-view">
-          <span class="visualily-hidden">Показать карточку на весь экран</span>
-        </a>
-        <a href="#" class="button-view">
-          <span class="visualily-hidden">Показать список</span>
-        </a>
-
+        <div class="catalog-products-filter">
+          <h2 class="visualily-hidden" hidden>Список гостиниц</h2>
+          <p class="catalog-products-title">Найдено гостиниц: 38</p>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="popular">Сначала популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <div class="button-view-wrapper">
+            <a href="#" class="button-view button-view-active">
+              <span class="visualily-hidden">Показать карточки</span>
+            </a>
+            <a href="#" class="button-view">
+              <span class="visualily-hidden">Показать карточку на весь экран</span>
+            </a>
+            <a href="#" class="button-view">
+              <span class="visualily-hidden">Показать список</span>
+            </a>
+          </div>
+        </div>
         <ul class="product-list">
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-img" src="images/catalog/amara-resort.jpg" alt="Вид из каньона на звездное небо" width="300" height="212">
+              <img class="product-card-img" src="images/catalog/amara-resort.jpg" alt="Вид из каньона на звездное небо"
+                width="300" height="212">
               <h3 class="product-card-title">Amara Resort & Spa</h3>
             </a>
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 4000 ₽</span></p>
@@ -149,7 +158,8 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-img" src="images/catalog/villas-at-poco-diablo.jpg" alt="Вид на каньоны издалека" width="300" height="212">
+              <img class="product-card-img" src="images/catalog/villas-at-poco-diablo.jpg" alt="Вид на каньоны издалека"
+                width="300" height="212">
               <h3 class="product-card-title">Villas at Poco Diablo</h3>
             </a>
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 5000 ₽</span></p>
@@ -162,7 +172,8 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-img" src="images/catalog/desert-quail-inn.jpg" alt="Вид на каньон днём" width="300" height="212">
+              <img class="product-card-img" src="images/catalog/desert-quail-inn.jpg" alt="Вид на каньон днём"
+                width="300" height="212">
               <h3 class="product-card-title">Desert Quail Inn</h3>
             </a>
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 2500 ₽</span></p>
@@ -175,7 +186,8 @@
           </li>
           <li class="product-card">
             <a class="product-card-link" href="#">
-              <img class="product-card-img" src="images/catalog/greenTree-inn.jpg" alt="Вид на каньон и звёдное небо издалека" width="300" height="212">
+              <img class="product-card-img" src="images/catalog/greenTree-inn.jpg"
+                alt="Вид на каньон и звёдное небо издалека" width="300" height="212">
               <h3 class="product-card-title">GreenTree Inn</h3>
             </a>
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 1500 ₽</span></p>
@@ -213,7 +225,7 @@
 
       <section class="subscription" data-test="subscribe">
         <h2 class="subscription-title">Подпишитесь на рассылку</h2>
-        <p class="subscription-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscription-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
