@@ -115,8 +115,8 @@
             </label>
           </fieldset>
           <div class="button-wrapper">
-            <button class="catalog-filter-button button-blue" type="submit">Применить</button>
-            <button class="catalog-filter-button catalog-filter-button-cancel" type="reset">Сбросить</button>
+            <button class="catalog-filter-button button button-blue" type="submit">Применить</button>
+            <button class="catalog-filter-button catalog-filter-button-cancel button" type="reset">Сбросить</button>
           </div>
         </form>
       </section>
@@ -177,12 +177,12 @@
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 4000 ₽</span></p>
             <div class="product-card-button-wrapper">
               <a class="product-card-button-more button" href="#">подробнее</a>
-              <a class="product-card-button-like button-blue" href="#">в избранное</a>
+              <a class="product-card-button-like button button-blue" href="#">в избранное</a>
             </div>
             <div class="product-card-rating-wrapper">
-              <p class="star four-stars">
+              <div class="star four-stars" role="img" aria-label="3 звезды">
                 <span class="visualily-hidden">Отель 4 звезды</span>
-              </p>
+              </div>
               <p class="product-card-rating"><span>Рейтинг: 8,5</span></p>
             </div>
           </li>
@@ -195,12 +195,12 @@
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 5000 ₽</span></p>
             <div class="product-card-button-wrapper">
               <a class="product-card-button-more button" href="#">подробнее</a>
-              <a class="product-card-button-like product-card-button-like-active" href="#">в избранном</a>
+              <a class="product-card-button-like product-card-button-like-active button" href="#">в избранном</a>
             </div>
             <div class="product-card-rating-wrapper">
-              <p class="star four-stars">
+              <div class="star four-stars" role="img" aria-label="4 звезды">
                 <span class="visualily-hidden">Отель 4 звезды</span>
-              </p>
+              </div>
               <p class="product-card-rating"><span>Рейтинг: 9,2</span></p>
             </div>
           </li>
@@ -213,12 +213,12 @@
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 2500 ₽</span></p>
             <div class="product-card-button-wrapper">
               <a class="product-card-button-more button" href="#">подробнее</a>
-              <a class="product-card-button-like button-blue" href="#">в избранное</a>
+              <a class="product-card-button-like button button-blue" href="#">в избранное</a>
             </div>
             <div class="product-card-rating-wrapper">
-              <p class="star three-stars">
+              <div class="star three-stars" role="img" aria-label="3 звезды">
                 <span class="visualily-hidden">Отель 3 звезды</span>
-              </p>
+              </div>
               <p class="product-card-rating"><span>Рейтинг: 6,9</span></p>
             </div>
           </li>
@@ -231,12 +231,12 @@
             <p class="product-card-subtitle">Гостиница<span class="product-card-price">От 1500 ₽</span></p>
             <div class="product-card-button-wrapper">
               <a class="product-card-button-more button" href="#">подробнее</a>
-              <a class="product-card-button-like button-blue" href="#">в избранное</a>
+              <a class="product-card-button-like button button-blue" href="#">в избранное</a>
             </div>
             <div class="product-card-rating-wrapper">
-              <p class="star two-stars">
+              <div class="star two-stars" role="img" aria-label="2 звезды">
                 <span class="visualily-hidden">Отель 2 звезды</span>
-              </p>
+              </div>
               <p class="product-card-rating"><span>Рейтинг: 5,0</span></p>
             </div>
           </li>
@@ -271,7 +271,7 @@
           <label class="visualily-hidden" for="subscription-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email"
             required>
-          <button class="subscription-button button-blue" type="submit">Подписаться</button>
+          <button class="subscription-button button button-blue" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
