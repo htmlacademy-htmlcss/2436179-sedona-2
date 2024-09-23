@@ -19,7 +19,7 @@
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Cедоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-active" href="catalog.html">Гостиницы</a>
@@ -34,7 +34,7 @@
           <li class="navigation-item">
             <a class="navigation-link navigation-icon-like" href="#">
               <span class="visualily-hidden">Избранное</span>
-              <span class="likes-number"></span>
+              <span class="likes-number">12</span>
             </a>
           </li>
           <li class="navigation-item-button">
@@ -59,61 +59,87 @@
         </ol>
         <h2 class="visualily-hidden">Фильтрация гостиниц</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="swimming-pool" checked>
-                  Бассейн
+                  <input class="visualily-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
-              <li>
+              <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="car-parking" checked>
-                  Парковка
+                  <input class="visualily-hidden control-input" type="checkbox" name="car-parking" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
-              <li>
+              <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="checkbox" name="wi-fi">
-                  Wi-Fi
+                  <input class="visualily-hidden control-input" type="checkbox" name="wi-fi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <legend class="catalog-filter-title">Тип Жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type" checked>
-                  Гостиница
+                  <input class="visualily-hidden control-input" type="radio" name="type" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
                 </label>
               </li>
-              <li>
+              <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type">
-                  Мотель
+                  <input class="visualily-hidden control-input" type="radio" name="type">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
-              <li>
+              <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type">
-                  Апартаменты
+                  <input class="visualily-hidden control-input" type="radio" name="type">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <label class="control">
-              <input class="control-input" type="text" name="from" placeholder="0 от">
-            </label>
-            <label class="control">
-              <input class="control-input" type="text" name="to" placeholder="9000 до">
-            </label>
+            <div class="range-wrapper-inputs">
+              <label class="catalog-filter-label">
+                <input class="range-input" type="number" value="0" name="min-price">
+                <span class="range-input-placeholder">от</span>
+              </label>
+              <label class="catalog-filter-label">
+                <input class="range-input max-price" type="number" value="9000" name="max-price">
+                <span class="range-input-placeholder">до</span>
+              </label>
+            </div>
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="left: 10px; width: 210px">
+                  <button type="button" class="range-toggle toggle-min">
+                    <span class="visualily-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button type="button" class="range-toggle toggle-max">
+                    <span class="visualily-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
+
           <div class="button-wrapper">
             <button class="catalog-filter-button button button-blue" type="submit">Применить</button>
             <button class="catalog-filter-button catalog-filter-button-cancel button" type="reset">Сбросить</button>
@@ -124,48 +150,54 @@
         <div class="catalog-products-filter">
           <h2 class="visualily-hidden">Список гостиниц</h2>
           <p class="catalog-products-title">Найдено гостиниц: 38</p>
-          <select class="select-control" aria-label="Сортировка">
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="popular">Сначала популярные</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <div class="button-view-wrapper">
-            <a href="#" class="button-view button-view-active">
-              <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 0H0V6H4V0Z" fill="black" />
-                <path d="M16 0H12V6H16V0Z" fill="black" />
-                <path d="M10 0H6V6H10V0Z" fill="black" />
-                <path d="M4 8H0V14H4V8Z" fill="black" />
-                <path d="M16 8H12V14H16V8Z" fill="black" />
-                <path d="M10 8H6V14H10V8Z" fill="black" />
-              </svg>
-              <span class="visualily-hidden">Показать карточки</span>
-            </a>
-            <a href="#" class="button-view">
-              <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 12H0V14H16V12Z" fill="black" />
-                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
-              </svg>
 
-              <span class="visualily-hidden">Показать карточку на весь экран</span>
-            </a>
-            <a href="#" class="button-view">
-              <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 0H0V2H2V0Z" fill="black" />
-                <path d="M16 0H4V2H16V0Z" fill="black" />
-                <path d="M2 4H0V6H2V4Z" fill="black" />
-                <path d="M16 4H4V6H16V4Z" fill="black" />
-                <path d="M2 8H0V10H2V8Z" fill="black" />
-                <path d="M16 8H4V10H16V8Z" fill="black" />
-                <path d="M2 12H0V14H2V12Z" fill="black" />
-                <path d="M16 12H4V14H16V12Z" fill="black" />
-              </svg>
-              <span class="visualily-hidden">Показать список</span>
-            </a>
+          <div class="sorting-container">
+            <div class="select">
+              <select class="select-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="popular">Сначала популярные</option>
+                <option value="expensive">Сначала дорогие</option>
+              </select>
+            </div>
+            <div class="button-view-wrapper">
+              <a href="#" class="button-view button-view-active">
+                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 0H0V6H4V0Z" fill="black" />
+                  <path d="M16 0H12V6H16V0Z" fill="black" />
+                  <path d="M10 0H6V6H10V0Z" fill="black" />
+                  <path d="M4 8H0V14H4V8Z" fill="black" />
+                  <path d="M16 8H12V14H16V8Z" fill="black" />
+                  <path d="M10 8H6V14H10V8Z" fill="black" />
+                </svg>
+                <span class="visualily-hidden">Показать карточки</span>
+              </a>
+              <a href="#" class="button-view">
+                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 12H0V14H16V12Z" fill="black" />
+                  <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
+                </svg>
+
+                <span class="visualily-hidden">Показать карточку на весь экран</span>
+              </a>
+              <a href="#" class="button-view">
+                <svg aria-hidden="true" focusable="false" width="16" height="14" viewBox="0 0 16 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 0H0V2H2V0Z" fill="black" />
+                  <path d="M16 0H4V2H16V0Z" fill="black" />
+                  <path d="M2 4H0V6H2V4Z" fill="black" />
+                  <path d="M16 4H4V6H16V4Z" fill="black" />
+                  <path d="M2 8H0V10H2V8Z" fill="black" />
+                  <path d="M16 8H4V10H16V8Z" fill="black" />
+                  <path d="M2 12H0V14H2V12Z" fill="black" />
+                  <path d="M16 12H4V14H16V12Z" fill="black" />
+                </svg>
+                <span class="visualily-hidden">Показать список</span>
+              </a>
+            </div>
           </div>
+
         </div>
         <ul class="product-list">
           <li class="product-card">
@@ -313,7 +345,7 @@
         <a class="footer-contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
         <p class="footer-contacts-about">
           <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-            <svg aria-hidden="true" focusable="false" width="115" height="34" viewBox="0 0 115 34"
+            <svg role="img" aria-label="логотип HTML Академии" width="115" height="34" viewBox="0 0 115 34"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M0 13.2564V15.8564H2.5V13.2564H0Z" />
               <path

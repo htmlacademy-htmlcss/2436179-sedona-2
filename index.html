@@ -19,7 +19,7 @@
             <a class="navigation-link navigation-link-active" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О седоне</a>
+            <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
@@ -34,7 +34,7 @@
           <li class="navigation-item">
             <a class="navigation-link navigation-icon-like" href="#">
               <span class="visualily-hidden">Избранное</span>
-              <span class="likes-number"></span>
+              <span class="likes-number">12</span>
             </a>
           </li>
           <li class="navigation-item-button">
@@ -91,16 +91,16 @@
         <ul class="service-list">
           <li class="service-item service-item-light service-item-home">
             <h3 class="service-item-title">Жильё</h3>
-            <p class="service-item-description">Рекомендуем пожить в настоящем мотеле,<br> всё как в кино!</p>
+            <p class="service-item-description">Рекомендуем пожить <br> в настоящем мотеле,<br> всё как в кино!</p>
           </li>
           <li class="service-item service-item-food">
             <h3 class="service-item-title">Еда</h3>
-            <p class="service-item-description">Всегда заказывайте топовый фирменный бургер,<br> вы не разочаруетесь!
+            <p class="service-item-description">Всегда заказывайте <br> топовый фирменный бургер,<br> вы не разочаруетесь!
             </p>
           </li>
           <li class="service-item service-item-light service-item-gift">
             <h3 class="service-item-title">Сувениры</h3>
-            <p class="service-item-description">Не только китайского, но и настоящего местного производства!</p>
+            <p class="service-item-description">Не только китайского, <br> но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
@@ -190,5 +190,56 @@
       </section>
     </footer>
   </body>
+
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-auth">
+      <button class="modal-close-button">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z"/>
+        </svg>
+        <span class="visualily-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group check-in">
+            <label class="form-label" for="check-in">
+              Дата заезда:
+            </label>
+            <input class="field field-date" type="date" id="check-in" name="check-in">
+          </p>
+          <p class="field-group check-out">
+            <label class="form-label" for="check-out">
+              Дата выезда:
+            </label>
+            <input class="field field-date" type="date" id="check-out" name="check-out">
+          </p>
+
+          <div class="field-people-wrapper">
+            <p class="field-group adult">
+              <label class="form-label" for="adult">
+                Взрослые:
+              </label>
+              <input class="field field-people" type="number" id="adult" name="adult" value="2">
+            </p>
+            <p class="field-group children">
+              <span class="form-label">
+                <label class="form-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <input class="field field-people" type="number" id="children" name="children" value="2">
+            </p>
+          </div>
+
+          <button class="button button-blue auth-form-button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
 
 </html>
