@@ -694,6 +694,10 @@ body {
   cursor: pointer;
 }
 
+.breadcrums-item-link-active {
+  cursor: default;
+}
+
 .breadcrums-item {
   background-image: url('../images/arrow.svg');
   background-repeat: no-repeat;
@@ -712,6 +716,10 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.breadcrums-item-link-active:hover {
+  color: inherit;
+}
+
 .breadcrums-item-link:focus {
   color: #FFFFFF;
   outline: 3px solid #83B3D3;
@@ -719,6 +727,10 @@ body {
 
 .breadcrums-item-link:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrums-item-link-active:active {
+  color: inherit;
 }
 
 .breadcrums-item-main {
@@ -769,6 +781,7 @@ body {
   display: block;
   padding-left: 36px;
   font: inherit;
+  cursor: pointer;
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -981,6 +994,7 @@ body {
   background-image: url("../images/arrow-black.svg");
   background-repeat: no-repeat;
   background-position: 260px 20px;
+  cursor: pointer;
 }
 
 .select-control:hover,
@@ -1042,6 +1056,7 @@ body {
 }
 
 .product-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
@@ -1049,6 +1064,15 @@ body {
   margin-bottom: 80px;
   padding: 0;
   list-style: none;
+}
+
+.product-list::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -40px;
+  background-color: #E6E6E6;
 }
 
 .product-card {
@@ -1281,8 +1305,8 @@ body {
   border-radius: 30px;
 }
 
-.modal-auth {
-  width: 577px;
+.modal-content {
+  min-width: 577px;
 }
 
 .modal-close-button {
@@ -1331,24 +1355,47 @@ body {
   color: #000000;
 }
 
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.field-group-people {
+  position: relative;
+}
+
+.field-group-people:nth-child(2)  {
+  margin-left: auto;
+}
+
+.field-group-people:nth-child(2) input {
+  margin-left: 82px;
+}
+
+.field-group-people input {
+  border-radius: 4px;
+  margin-left: 45px;
+}
+
 .form-label {
   font-size: 20px;
   font-weight: 700;
+  margin-top: 10px;
 }
 
-.field-group {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  margin-bottom: 48px;
+.field-wrapper {
+  margin-bottom: 23px;
 }
 
 .field-date {
+  padding: 10px 20px;
   font-weight: 700;
   font-size: 20px;
   width: 400px;
   margin-left: auto;
   border-radius: 4px;
+  transform: translateX(0);
 }
 
 .field-people {
@@ -1356,8 +1403,9 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
-  padding: 14px 40px;
+  padding: 10px 40px;
   text-align: center;
+  transform: translateX(0);
   appearance: textfield;
 }
 
@@ -1367,35 +1415,86 @@ body {
   margin: 0;
 }
 
+.input-conteiner {
+  position: relative;
+}
+
+.input-button {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 12px;
+  left: 58px;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.input-button svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.input-button:hover svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.input-button:focus {
+  fill: rgba(0, 0, 0, 1);
+  outline: 3px solid #82B3D3;
+}
+
+.input-button:focus svg {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.input-button:active svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.input-button-children {
+  left: 95px;
+}
+
+.plus-button {
+  top: 17px;
+  left: 125px;
+}
+
+.plus-button-children {
+  left: 157px;
+}
+
 .field-people-wrapper {
   display: flex;
 }
 
-.adult input {
-  border-radius: 4px;
-}
-
-.adult label {
-  margin-right: 46px;
-}
-
-.children {
-  position: relative;
-  margin-left: auto;
-}
-
-.children input {
-  margin-left: 82px;
-  border-radius: 4px;
-}
-
 .auth-form-button {
+  padding: 12px 0;
+  margin-top: 48px;
   width: 100%;
+}
+
+.message {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+.message-alert {
+  color: #FF5757;
 }
 
 .tooltip {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   left: 60px;
+  z-index: 1;
 }
 
 .tooltip-toggle {
@@ -1409,6 +1508,7 @@ body {
   background-image: url('../images/info.svg');
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .tooltip-toggle:hover {
@@ -1416,7 +1516,7 @@ body {
 }
 
 .tooltip-text {
-  background-color: #242424;
+  background-color: #333333;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
@@ -1430,6 +1530,19 @@ body {
   right: 50%;
   transform: translateX(50%);
   display: none;
+}
+
+.tooltip-text:after {
+  content: '';
+  background-image: url('../images/tooltip-arrow.svg');
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
