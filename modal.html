@@ -197,90 +197,91 @@
         </p>
       </section>
     </footer>
-  </body>
 
-  <div class="modal-container">
-    <div class="modal" data-test="modal">
-      <button class="modal-close-button">
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
-        </svg>
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <section class="modal-content">
-        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="field-group">
-            <label class="form-label" for="check-in">
-              Дата Заезда:
-            </label>
-            <div class="field-wrapper">
-              <button class="calendar-button" type="button" aria-label="выбрать дату"></button>
-              <input class="field field-date" type="text" name="check-in" id="check-in" placeholder="27 апреля 2020"
-                required>
-              <p class="message message-alert">Мы не можем отправить вас в прошлое.</p>
-            </div>
-          </div>
-          <div class="field-group">
-            <label class="form-label" for="check-out">
-              Дата Выезда:
-            </label>
-            <div class="field-wrapper">
-              <button class="calendar-button" type="button" aria-label="выбрать дату"></button>
-              <input class="field field-date" type="text" name="check-out" id="check-out" placeholder="1 сентября 2023"
-                required>
-              <p class="message message-info">На эти даты есть свободные номера. Пока есть.</p>
-            </div>
-          </div>
-
-          <div class="field-people-wrapper">
-            <div class="field-group field-group-people">
-              <label class="form-label" for="adult">
-                Взрослые:
+    <div class="modal-container">
+      <div class="modal" data-test="modal">
+        <button class="modal-close-button">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" />
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="field-group">
+              <label class="form-label" for="check-in">
+                Дата Заезда:
               </label>
-              <div class="input-container">
-                <button class="input-button" type="button" aria-label="уменьшить">
-                  <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
-                  </svg>
-                </button>
-                <button class="input-button plus-button" type="button" aria-label="увеличить">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg>
-                </button>
-                <input class="field field-people" type="number" name="adult" id="adult" value="2" required>
+              <div class="field-wrapper">
+                <button class="calendar-button" type="button" aria-label="выбрать дату"></button>
+                <input class="field field-date" type="text" name="check-in" id="check-in" placeholder="27 апреля 2020"
+                  required>
+                <p class="message message-alert">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </div>
+            <div class="field-group">
+              <label class="form-label" for="check-out">
+                Дата Выезда:
+              </label>
+              <div class="field-wrapper">
+                <button class="calendar-button" type="button" aria-label="выбрать дату"></button>
+                <input class="field field-date" type="text" name="check-out" id="check-out"
+                  placeholder="1 сентября 2023" required>
+                <p class="message message-info">На эти даты есть свободные номера. Пока есть.</p>
               </div>
             </div>
 
-            <div class="field-group field-group-people">
-              <label class="form-label" for="children">Дети:</label>
-              <div class="tooltip">
-                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
-                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
-                  будут с вами, возраст которых от 6 до 18 лет. Дети <br> до 6 лет размещаются бесплатно.</span>
+            <div class="field-people-wrapper">
+              <div class="field-group field-group-people">
+                <label class="form-label" for="adult">
+                  Взрослые:
+                </label>
+                <div class="input-container">
+                  <button class="input-button" type="button" aria-label="уменьшить количество взрослых">
+                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" />
+                    </svg>
+                  </button>
+                  <button class="input-button plus-button" type="button" aria-label="увеличить количество взрослых">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                    </svg>
+                  </button>
+                  <input class="field field-people" type="number" name="adult" id="adult" value="2" required>
+                </div>
               </div>
-              <div class="input-container">
-                <button class="input-button input-button-children" type="button" aria-label="уменьшить">
-                  <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L0 2L14 2V0L0 0Z" />
-                  </svg>
-                </button>
-                <button class="input-button plus-button plus-button-children" type="button" aria-label="увеличить">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
-                  </svg>
-                </button>
-                <input class="field field-people children" type="number" name="children" id="children" value="2">
+
+              <div class="field-group field-group-people">
+                <label class="form-label" for="children">Дети:</label>
+                <div class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети <br> до 6 лет размещаются бесплатно.</span>
+                </div>
+                <div class="input-container">
+                  <button class="input-button" type="button" aria-label="уменьшить количество детей">
+                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L0 2L14 2V0L0 0Z" />
+                    </svg>
+                  </button>
+                  <button class="input-button plus-button" type="button" aria-label="увеличить количество детей">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" />
+                    </svg>
+                  </button>
+                  <input class="field field-people children" type="number" name="children" id="children" value="2">
+                </div>
               </div>
             </div>
-          </div>
 
-          <button class="button button-blue auth-form-button" type="submit">Найти</button>
-        </form>
-      </section>
+            <button class="button button-blue auth-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
-  </div>
+
+  </body>
 
 </html>
